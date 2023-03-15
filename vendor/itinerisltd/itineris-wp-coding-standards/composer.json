@@ -1,0 +1,69 @@
+{
+  "name": "itinerisltd/itineris-wp-coding-standards",
+  "description": "PHP_CodeSniffer rules for Itineris WordPress projects",
+  "license": "MIT",
+  "type": "phpcodesniffer-standard",
+  "keywords": [
+    "phpcs",
+    "standards",
+    "wordpress",
+    "itineris"
+  ],
+  "authors": [
+    {
+      "name": "Itineris Limited",
+      "email": "dev@itineris.co.uk",
+      "homepage": "https://itineris.co.uk/",
+      "role": "Company"
+    },
+    {
+      "name": "Tang Rufus",
+      "email": "tangrufus@gmail.com",
+      "homepage": "https://typist.tech/",
+      "role": "Developer"
+    },
+    {
+      "name": "Lee Hanbury-Pickett",
+      "email": "lee.hanbury@gmail.com",
+      "homepage": "https://github.com/codepuncher",
+      "role": "Developer"
+    }
+  ],
+  "homepage": "https://itinerisltd.github.io/itineris-wp-coding-standards/",
+  "support": {
+    "email": "dev@itineris.co.uk",
+    "issues": "https://github.com/ItinerisLtd/itineris-wp-coding-standards/issues",
+    "source": "https://github.com/ItinerisLtd/itineris-wp-coding-standards"
+  },
+  "require": {
+    "php": "^7.2 || ^8.0",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "require-dev": {
+    "roave/security-advisories": "dev-master"
+  },
+  "prefer-stable": true,
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    },
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.3.x-dev"
+    }
+  },
+  "scripts": {
+    "pretag": [
+      "composer update",
+      "composer normalize",
+      "npx doctoc README.md",
+      "github_changelog_generator --no-verbose"
+    ]
+  }
+}

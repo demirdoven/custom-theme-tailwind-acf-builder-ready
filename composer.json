@@ -1,0 +1,17 @@
+{
+    "require": {
+        "stoutlogic/acf-builder": "^1.12"
+    },
+    "require-dev": {
+        "itinerisltd/itineris-wp-coding-standards": "^0.4.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "style:check": "phpcs",
+        "style:fix": "phpcbf"
+    }
+}
